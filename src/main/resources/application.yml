@@ -1,0 +1,28 @@
+spring:
+  profiles:
+    active: local
+  jpa:
+    properties:
+      hibernate:
+        default_batch_fetch_size : 10000
+
+#  mail:
+#    host: smtp.gmail.com
+#    port: 587
+#    username: username
+#    password: password
+#    properties:
+#      mail:
+#        smtp:
+#          auth: true
+#          starttls:
+#            enable: true
+
+#server:
+#  port: port
+
+
+# TODO : config file upload path and url
+resource:
+  path: ./upload/
+  rootUrl: http://localhost:8080/files/

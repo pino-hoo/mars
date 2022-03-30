@@ -1,0 +1,25 @@
+server:
+  shutdown: graceful
+  servlet:
+    encoding:
+      force-response: true
+
+spring:
+  lifecycle:
+    timeout-per-shutdown-phase: 20s
+  jpa:
+    show-sql: false
+    hibernate:
+      ddl-auto: update
+  datasource:
+    driver-class-name: org.h2.Driver
+#    driver-class-name: org.mariadb.jdbc.Driver
+#    url: jdbc:mariadb://'host':'port'/'db_name'?serverTimezone=UTC&characterEncoding=UTF-8
+#    password: 'password'
+#    username: 'username'
+
+
+jwt:
+  secret-key: 'local-secret-key'
+  expire-length: 360000000
+  refresh-expire-length: 2000000000
