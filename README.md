@@ -1,6 +1,6 @@
-# project
+# profile
 
-> 프로젝트
+> 프로필
 
 
 ## Getting Started
