@@ -1,6 +1,6 @@
-# profile
+# mars
 
-> 프로필
+> 마스외전 프로젝트
 
 
 ## Getting Started
