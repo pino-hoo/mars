@@ -1,7 +1,5 @@
 # mars
 
-// Github TEST
-
 > 마스외전 프로젝트
 
 
