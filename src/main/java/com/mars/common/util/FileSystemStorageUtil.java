@@ -76,6 +76,4 @@ public class FileSystemStorageUtil {
     private String extractFileExtension(MultipartFile file) {
         return file.getOriginalFilename().substring(file.getOriginalFilename().lastIndexOf("."));
     }
-
-
 }

@@ -95,6 +95,4 @@ public class GlobalExceptionHandler {
         final ErrorResponse response = ErrorResponse.of(ErrorCode.INVALID_INPUT_VALUE);
         return new ResponseEntity<>(response, HttpStatus.BAD_REQUEST);
     }
-
-
 }

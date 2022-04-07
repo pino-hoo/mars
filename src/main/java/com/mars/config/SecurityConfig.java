@@ -102,6 +102,5 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
             response.getWriter()
                     .write(objectMapper.writeValueAsString(errorResponse));
         };
-
     }
 }

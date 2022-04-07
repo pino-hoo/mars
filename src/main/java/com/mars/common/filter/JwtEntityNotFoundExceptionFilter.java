@@ -32,7 +32,6 @@ public class JwtEntityNotFoundExceptionFilter extends OncePerRequestFilter {
 
             response.getWriter()
                     .write(objectMapper.writeValueAsString(errorResponse));
-
         }
     }
 }

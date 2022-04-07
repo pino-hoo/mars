@@ -86,6 +86,4 @@ public class User extends BaseTimeEntity implements UserDetails {
             throw new InvalidPasswordException();
         }
     }
-
-
 }
