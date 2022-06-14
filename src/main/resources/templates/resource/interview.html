@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="마스외전" />
+    <meta name="keywords" content="마스외전프로필" />
+    <meta name="description" content="마스외전프로필" />
+    <link rel="stylesheet" href="../resource/css/common.css" />
+    <link rel="stylesheet" href="../resource/css/componets.css" />
+    <link rel="stylesheet" href="../resource/css/animate.css" />
+    <link rel="stylesheet" href="../resource/css/main.css" />
+  <!--제이쿼리-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <title>MarsProfile - 그룹인터뷰페이지</title>
+  </head>
+  <body >
+    <!--그룹 인터뷰 페이지-->
+    <!---thumbnailContainer-->
+      <div class="group-interview-container container">
+        <div  class="group-interview-content">
+
+            <div class="editbtn group-interview-thumbs thumbs left-thumbs" >
+                <img src="https://img.youtube.com/vi/-YOr_qLRjjo/0.jpg" />
+            </div>
+
+            <div class="group-interview-thumbs thumbs right-thumbs" >
+                <img src="https://img.youtube.com/vi/nkDVd9Caz0U/0.jpg"/>
+            </div>
+            
+            <div class="group-interview-thumbs thumbs left-thumbs" >
+                <img src="https://img.youtube.com/vi/nkDVd9Caz0U/0.jpg"/>
+            </div>
+            <div class="group-interview-thumbs thumbs right-thumbs" >
+                <img src="https://img.youtube.com/vi/nkDVd9Caz0U/hq2.jpg"  />
+            </div>
+            <div class="group-interview-thumbs thumbs left-thumbs" >
+                <img src="https://img.youtube.com/vi/nkDVd9Caz0U/0.jpg"/>
+            </div>
+            <div class="group-interview-thumbs thumbs right-thumbs" >
+                <img src="https://img.youtube.com/vi/nkDVd9Caz0U/0.jpg" />
+            </div>
+           
+        </div>
+      </div>
+
+      <div class="group-interview-popup_wrapper">
+          <div class="group-interview-popup-header">
+            <span class="group-interview-popup-title">YouTube Link</span>
+            <button type="button" class="group-interview-btn-close"></button>
+          </div>
+          <div class="group-interview-popup-body">
+            <hr size="2px"  color="#004a7c"/>
+            <div class="input-text">
+              <input type="text" placeholder="링크를 입력해주세요."/>
+            </div>
+            <a href="" class="btn type01 small normal">등록하기</a>
+          </div>
+      </div>
+    <!--//그룹 인터뷰 페이지-->
+
+    <script>
+
+    //팝업 기능
+      $(".group-interview-popup_wrapper").hide();
+      $(".editbtn").click(function(){
+        $(".group-interview-popup_wrapper").show();
+      })
+    
+      
+      $(".group-interview-btn-close").click(function(){
+        $(".group-interview-popup_wrapper").hide();
+      })
+    
+      </script>
+  </body>
+</html>
