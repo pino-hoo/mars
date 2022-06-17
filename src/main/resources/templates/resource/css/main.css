@@ -1,110 +1,687 @@
 /* css 작성 할 때 부모객체의 class 를 앞에 두는 것을 원칙한다.*/
 /* 사파리에서 깨지는거 조심 */
 /* 디자인은 360*610 기준 */
+/* 280 ~ 1023px 까지 반응형  */
+/* 가로와 이미지는 %단위 가능 */
 
-/*group 페이지 영역*/
-.index-container{
-background: url('../images/img_group_image_3.png' ) no-repeat top;
-background-size: cover;
+/* khj 공통 */
+html{ height: 100%; }
+.container { height: 100%;}
+.khj-wrapper {
+  height: 100%;
 }
-.index-container .index-content {padding: 4.444% 4.166%;}
-.index-container .index-content .index-content-header {
-display: inline-block; height:62px;}
-.index-container .index-content .index-content-header .index-logo{ height: 100%;}
-.index-container .index-content .index-content-header .index-group-name {
-display: inline; margin: 8px; font-size: 2em; font-weight: 500; color: #ffffff;}
-.index-container .index-content .index-content-body { 
-position:absolute; bottom: 20px; right:12px; 
+
+.popup-content {
+
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+  width: 80.55555555556%;
+  margin: 0 auto;
+  background: #fff;
 }
-.index-container .index-content .index-content-body button {
-font-weight: bolder;
-line-height:30px;
+
+.hidden {
+  display: none;
 }
-.index-container .index-content .index-content-body button img {
-height: 1em;
-margin: 0 auto;
-vertical-align:-1.4px;
+
+
+.popup-btn-close {
+  /* 위  13 , 14  c15ox*/
+  display: inline;
+  position: absolute;
+  right: 5.6%;
+  width: 15px;
+  height: 15px;
+  background: url("../images/btn_popup_x.png") no-repeat;
+  background-size: cover;
 }
+
+
+/* group 페이지 CSS */
+
+.khj-wrapper .index-container {
+  background: url("../images/img_group_image_3.png") no-repeat top;
+  background-size: cover;
+}
+
+.khj-wrapper .index-container .index-content {
+  padding: 15px 4.166%;
+}
+
+.khj-wrapper .index-container .index-content .index-content-header {
+  display: inline-block;
+  height: 62px;
+}
+
+.khj-wrapper .index-container .index-content .index-content-header .index-logo {
+  height: 100%;
+}
+
+.khj-wrapper
+  .index-container
+  .index-content
+  .index-content-header
+  .index-group-name {
+  display: inline;
+  margin: 8px;
+  font-size: 2em;
+  font-weight: 500;
+  color: #ffffff;
+}
+
+.khj-wrapper .index-container .index-content .index-content-body {
+  position: absolute;
+  bottom: 20px;
+  right: 4.166%;
+}
+
+.khj-wrapper .index-container .index-content .index-content-body button {
+  font-weight: bolder;
+  line-height: 30px;
+}
+
+.khj-wrapper .index-container .index-content .index-content-body button img {
+  height: 1em;
+  margin: 0 auto;
+  vertical-align: -1.4px;
+}
+
+/* 그룹 페이지 영역 미디어쿼리 */
+@media only screen and (min-width: 412px) {
+  .khj-wrapper .index-container .index-content {
+    padding: 22px 4.5%;
+  }
+  .khj-wrapper .index-container .index-content .index-content-header {
+    height: 90px;
+  }
+  .khj-wrapper
+    .index-container
+    .index-content
+    .index-content-header
+    .index-group-name {
+    margin: 9px;
+    font-size: 2.2em;
+  }
+  .khj-wrapper .index-container .index-content .index-content-body {
+    bottom: 30px;
+    right: 4.5%;
+  }
+  .khj-wrapper .index-container .index-content .index-content-body button {
+    font-size: 1.2em;
+    line-height: 30px;
+    border: 2.9px solid #ffffff;
+    width: 98px;
+    height: 42px;
+    min-width: 80px;
+  }
+}
+
+@media only screen and (min-width: 540px) {
+  /*  세로 18.03278688525 % 가로50 */
+  .khj-wrapper .index-container .index-content .index-content-body button {
+    font-size: 1.3em;
+    width: 100px;
+    height: 43px;
+  }
+}
+
+@media only screen and (min-width: 712px) {
+  /*  세로 86.55737704918 가로 97.77777777778 */
+  .khj-wrapper .index-container .index-content {
+    padding: 35px 4.5%;
+  }
+
+  .khj-wrapper .index-container .index-content .index-content-header {
+    height: 140px;
+  }
+
+  .khj-wrapper
+    .index-container
+    .index-content
+    .index-content-header
+    .index-group-name {
+    margin: 11px;
+    font-size: 3.4em;
+  }
+
+  .khj-wrapper .index-container .index-content .index-content-body {
+    bottom: 35px;
+    right: 4.5%;
+  }
+
+  .khj-wrapper .index-container .index-content .index-content-body button {
+    font-size: 1.93em;
+    line-height: 30px;
+    border: 4px solid #ffffff;
+    width: 160px;
+    height: 65px;
+    border-radius: 15px;
+  }
+
+  .khj-wrapper .index-container .index-content .index-content-body button img {
+    vertical-align: -3.5px;
+  }
+}
+
+@media only screen and (min-width: 820px) {
+  /* 세로 93.44262295082 가로 127.77777777778 % */
+  .khj-wrapper .index-container .index-content {
+    padding: 37px 4.5%;
+  }
+
+  .khj-wrapper .index-container .index-content .index-content-body {
+    bottom: 39px;
+  }
+
+  .khj-wrapper .index-container .index-content .index-content-body button {
+    font-size: 2em;
+    border: 5px solid #ffffff;
+    width: 165px;
+    height: 70px;
+  }
+}
+
+@media only screen and (min-width: 912px) and (max-width: 1023px) {
+  /* 세로 124.26229508197 % 가로 153.33333333333 % */
+  .khj-wrapper .index-container .index-content {
+    padding: 40px 4.5%;
+  }
+
+  .khj-wrapper .index-container .index-content .index-content-header {
+    height: 167px;
+  }
+
+  .khj-wrapper .index-container .index-content .index-content-body {
+    bottom: 40px;
+  }
+}
+/* 그룹 영상페이지 영역 미디어쿼리 end */
+
 /*group-interview 페이지 영역*/
-.group-interview-container .group-interview-content{
-height: 100%; 
-padding: 4px 8px;
+.khj-wrapper {
+  height: 100%;
 }
-.group-interview-container .group-interview-content .group-interview-thumbs {
-/* 292px * 159  
-451 : 292px * 159   = 100: 64.745 * 35.254 */
-overflow:hidden;
-position: relative;
-width: 50%;
-height: 49.8%;
-padding: 6px 7px 0px 7px;
-}
-.group-interview-container .group-interview-content .group-interview-thumbs img {
-display: block;
-width: 100%;
-height: 100%;
-margin: auto;
-object-fit:cover;
-}
-.group-interview-container .group-interview-content .left-thumbs { float: left;}
-.group-interview-container .group-interview-content .right-thumbs{ float: right;}
 
-/*팝업 영역- 헤더*/
+.khj-wrapper .group-interview-container {
+  background-color: f3f9fb;
+  overflow: scroll;
+  padding: 6px 7px;
+}
 
-.group-interview-popup_wrapper {
-position: fixed; top: 40%; left: 9.7%;
-overflow: hidden;
-width:80.555%; 
-height:144px;
-margin: 0 auto;
-background: #fff;
+.khj-wrapper .group-interview-container .group-interview-thumbs {
+  /* 섬네일 원래 비율 292px * 159  */
+  overflow: hidden;
+  width: 50%;
+  height: 50%;
+  padding: 6px 7px;
 }
-.group-interview-popup_wrapper  .group-interview-popup-header {
-display: flex;
-width: 100%;
-height: 44px;
-padding: 1.7% 5.6%;
-font-size: 1.48em;
-align-items: center;
+
+.khj-wrapper .group-interview-container .group-interview-thumbs img {
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  object-fit: cover;
 }
-.group-interview-popup_wrapper .group-interview-popup-header .group-interview-popup-title{
-display: inline-block;
-height: 100%;
+
+.khj-wrapper .group-interview-container .left-thumbs {
+  float: left;
 }
-.group-interview-popup_wrapper .group-interview-popup-header .group-interview-btn-close {
-display: inline;
-position: absolute; right: 5.6%;
-width: 15px; height:15px;
-background:url('../images/btn_popup_x.png') no-repeat ; 
-background-size: cover;
+
+.khj-wrapper .group-interview-container .right-thumbs {
+  float: right;
+}
+
+
+/* 그룹 영상페이지 영역 미디어쿼리 */
+@media only screen and (min-width: 280px) and (max-width: 359px) {
+  .khj-wrapper .group-interview-container {
+    padding: 6px 6.23px;
+  }
+
+  .group-interview-container .group-interview-thumbs {
+    padding: 6px 6.23px;
+  }
+}
+
+@media only screen and (min-width: 412px) {
+  .khj-wrapper .group-interview-container {
+    padding: 9px 8px;
+  }
+
+  .group-interview-container .group-interview-thumbs {
+    padding: 9px 8px;
+  }
+}
+
+@media only screen and (min-width: 540px) {
+  /*  세로 18.03278688525 % 가로50 */
+  .khj-wrapper .group-interview-container {
+    padding: 7px 10.5px;
+  }
+
+  .khj-wrapper .group-interview-container .group-interview-thumbs {
+    padding: 7px 10.5px;
+  }
+}
+
+@media only screen and (min-width: 712px) {
+  /*  세로 86.55737704918 가로 97.77777777778 */
+  .khj-wrapper .group-interview-container {
+    padding: 11.1px 13.8px;
+  }
+
+  .khj-wrapper .group-interview-container .group-interview-thumbs {
+    padding: 11.1px 13.8px;
+  }
+}
+
+@media only screen and (min-width: 820px) {
+  /* 세로 93.44262295082 가로 127.77777777778 % */
+  .khj-wrapper .group-interview-container {
+    padding: 11.6px 15.9px;
+  }
+
+  .khj-wrapper .group-interview-container .group-interview-thumbs {
+    padding: 11.6px 15.9px;
+  }
+}
+
+@media only screen and (min-width: 912px) and (max-width: 1023px) {
+  /* 세로 124.26229508197 % 가로 153.33333333333 % */
+  .khj-wrapper .group-interview-container {
+    padding: 13.4px 17.7px;
+  }
+
+  .khj-wrapper .group-interview-container .group-interview-thumbs {
+    padding: 13.4px 17.7px;
+  }
+}
+
+/* 링크 수정 팝업 영역- 헤더*/
+
+.group-interview-popup_content {
+  width: 80.55555555556%;
+  /* height:144px; */
+}
+
+.group-interview-popup_content .group-interview-popup-header {
+  display: flex;
+  width: 100%;
+  height: 44px;
+  /* height: 50.34180555556%; */
+  padding: 1.7% 5.6%;
+  font-size: 1.48em;
+  align-items: center;
+}
+
+.group-interview-popup_content
+  .group-interview-popup-header
+  .group-interview-popup-title {
+  display: inline-block;
+  height: 100%;
+}
+
+.group-interview-popup_content
+  .group-interview-popup-header
+  .group-interview-btn-close {
+  display: inline;
+  position: absolute;
+  right: 5.6%;
+  width: 15px;
+  height: 15px;
+  background: url("../images/btn_popup_x.png") no-repeat;
+  background-size: cover;
 }
 
 /*팝업 영역- 바디*/
-.group-interview-popup_wrapper .group-interview-popup-body {
-width: 100%;
-text-align: center;
+.group-interview-popup_content .group-interview-popup-body {
+  width: 100%;
+  text-align: center;
 }
-.group-interview-popup_wrapper .group-interview-popup-body hr {
-width:100%;
-margin: 0;
+
+.group-interview-popup_content .group-interview-popup-body hr {
+  width: 100%;
+  margin: 0;
+  border-width: 2px 0 0 0;
 }
-.group-interview-popup_wrapper .group-interview-popup-body .input-text input {
-width: 87.585%;
-height: 28px;
-margin: 12px 6.206%;
-padding: 0%;
-border: 1.5px solid #b1b1b1;
-border-radius:5px;
-font-size: 0.2em;
-text-indent: 1em; 
-text-align: left;
-} 
-.group-interview-popup_wrapper .group-interview-popup-body .input-text input::placeholder {
-color: #d2d2d2;
-} 
-.group-interview-popup_wrapper .group-interview-popup-body a {
-margin: 0 auto;
-width: 87.586%;  
-height: 34px;
-font-weight: bolder;
+
+.group-interview-popup_content .group-interview-popup-body .input-text input {
+  width: 87.585%;
+  height: 28px;
+  margin: 12px 6.206%;
+  padding: 0%;
+  border: 1.5px solid #b1b1b1;
+  border-radius: 5px;
+  font-size: 0.2em;
+  text-indent: 1em;
+}
+
+.group-interview-popup_content
+  .group-interview-popup-body
+  .input-text
+  input::placeholder {
+  color: #d2d2d2;
+}
+
+.group-interview-popup_content .group-interview-popup-body .btn {
+  width: 87.586%;
+  height: 34px;
+  margin: 0 auto;
+  margin-bottom: 12px;
+  font-weight: bolder;
+  line-height: 34px;
+}
+
+/* 팝업영역 -미디어쿼리 */
+@media only screen and (min-width: 280px) and (max-width: 359px) {
+  .group-interview-popup_content .group-interview-popup-header {
+    height: 34.16px;
+    font-size: 1.2em;
+    /*33.88*/
+  }
+
+  .group-interview-popup_content
+    .group-interview-popup-header
+    .group-interview-btn-close {
+    width: 11.6px;
+    height: 11.6px;
+  }
+
+  .group-interview-popup_content .group-interview-popup-body hr {
+    border-width: 0.47px 0 0 0;
+  }
+
+  .group-interview-popup_content .group-interview-popup-body .input-text input {
+    height: 21.7px;
+    /*19.44444444444 %*/
+    margin: 9.3px 6.206%;
+    font-size: 0.2em;
+  }
+
+  .group-interview-popup_content .group-interview-popup-body .btn {
+    height: 26.4px;
+    line-height: 26.4px;
+    font-size: 0.7em;
+  }
+}
+
+@media only screen and (min-width: 412px) {
+  .group-interview-popup_content {
+    height: 164.755px;
+  }
+
+  .group-interview-popup_content .group-interview-popup-header {
+    /*팝업에서 헤더 높이 비율 30.55555555556 %*/
+    height: 50.341px;
+    font-size: 1.7em;
+  }
+
+  .group-interview-popup_content
+    .group-interview-popup-header
+    .group-interview-btn-close {
+    width: 17.16px;
+    height: 17.16px;
+  }
+
+  /*팝업 영역- 바디*/
+  .group-interview-popup_content .group-interview-popup-body hr {
+    border-width: 2px 0 0 0;
+  }
+
+  .group-interview-popup_content .group-interview-popup-body .input-text input {
+    height: 32px;
+    /*19.44444444444 %*/
+    margin: 13.7px 6.206%;
+    font-size: 0.4em;
+  }
+
+  .group-interview-popup_content .group-interview-popup-body .btn {
+    /*높이 23.61111111111 %*/
+    height: 38.9px;
+    line-height: 38.9px;
+    font-size: 1.1em;
+  }
+}
+
+@media only screen and (min-width: 540px) {
+  /*팝업대 세로 비율49.65517241379 %*/
+  .group-interview-popup_content {
+    width: 70%;
+    height: 187.696px;
+  }
+
+  .group-interview-popup_content .group-interview-popup-header {
+    /*팝업에서 헤더 높이 비율 30.55555555556 %*/
+    height: 57.351px;
+    font-size: 1.8em;
+  }
+
+  .group-interview-popup_content
+    .group-interview-popup-header
+    .group-interview-btn-close {
+    width: 19.55px;
+    height: 19.55px;
+    /*가로에서 5.1724137931*/
+  }
+  .group-interview-popup_content .group-interview-popup-body hr {
+    border-width: 1.218px 0 0 0;
+  }
+
+  .group-interview-popup_content .group-interview-popup-body .input-text input {
+    height: 36.496px;
+    /*19.44444444444 %*/
+    margin: 16px 6.206%;
+    /* 17.28%*/
+    font-size: 0.8em;
+  }
+
+  .group-interview-popup_content .group-interview-popup-body .btn {
+    /*높이 23.61111111111 %*/
+    height: 44.317px;
+    line-height: 44.317px;
+    font-size: 1.3em;
+  }
+}
+
+@media only screen and (min-width: 712px) {
+  .group-interview-popup_content {
+    width: 70%;
+    height: 247.476px;
+  }
+
+  .group-interview-popup_content .group-interview-popup-header {
+    height: 75.617px;
+    font-size: 2.3em;
+  }
+
+  .group-interview-popup_content
+    .group-interview-popup-header
+    .group-interview-btn-close {
+    width: 25.78px;
+    height: 25.78px;
+  }
+  .group-interview-popup_content .group-interview-popup-body hr {
+    border-width: 3.437px 0 0 0;
+  }
+
+  .group-interview-popup_content .group-interview-popup-body .input-text input {
+    height: 48.12px;
+    margin: 20px 6.206%;
+    font-size: 1.25em;
+  }
+
+  .group-interview-popup_content .group-interview-popup-body .btn {
+    height: 58.431px;
+    line-height: 58.431px;
+    font-size: 1.8em;
+  }
+}
+
+@media only screen and (min-width: 820px) {
+  .group-interview-popup_content {
+    width: 60.79%;
+    height: 247.476px;
+  }
+
+
+  .group-interview-popup_content .group-interview-popup-body .input-text input {
+    margin: 22px 6.206%;
+  }
+}
+
+@media only screen and (min-width: 912px) and (max-width: 1023px) {
+ 
+  .group-interview-popup_content {
+    width: 60%;
+    height: 271.708px;
+  }
+
+  .group-interview-popup_content .group-interview-popup-header {
+    height: 83.021px;
+    font-size: 2.7em;
+  }
+
+  .group-interview-popup_content
+    .group-interview-popup-header
+    .group-interview-btn-close {
+    width: 28.3px;
+    height: 28.3px;
+  }
+
+  .group-interview-popup_content .group-interview-popup-body hr {
+    border-width: 3.773px 0 0 0;
+  }
+
+  .group-interview-popup_content .group-interview-popup-body .input-text input {
+    height: 52.832px;
+    margin: 26px 6.206%;
+    font-size: 1.3em;
+  }
+
+  .group-interview-popup_content .group-interview-popup-body .btn {
+    height: 64.153px;
+    line-height: 64.153px;
+    font-size: 1.8em;
+  }
+}
+
+/* 사진 링크 영상 팝업 영역 */
+
+.portfolio-popup-content .portfolio-popup-content-header {
+  display: flex;
+  height: 42px;
+  align-items: center;
+}
+
+/*     
+   영상 254px*452px
+*/
+
+.portfolio-popup-content .portfolio-popup-content-body {
+  display: flex;
+  flex-direction: column;
+  margin: 0 19px 13px;
+}
+.portfolio-popup-content .portfolio-popup-content-body iframe {
+  align-self: center;
+  width: 252px;
+  height: 453px;
+}
+
+.portfolio-popup-content .portfolio-popup-content-body img {
+  align-self: center;
+  width: 100%;
+}
+
+.portfolio-popup-content .portfolio-popup-content-body .portfolio-popup-title {
+  font-size: 1.1em;
+  padding-top: 7px;
+}
+/* height:589px; 593.891 width:290px*/
+.portfolio-popup-content
+  .portfolio-popup-content-body
+  .portfolio-popup-description {
+  font-size: 0.9em;
+  padding-top: 7px;
+}
+.portfolio-popup-content .portfolio-popup-content-body hr {
+  /*252 *2*/
+  width: 100%;
+  margin: 0;
+  border-width: 1.4px 0 0 0;
+}
+
+@media only screen and (min-width: 712px) {
+  .portfolio-popup-content {
+    width: 70%;
+  }
+  .portfolio-popup-content .portfolio-popup-content-body .portfolio-popup-title {
+    font-size: 1.7em;
+  }
+  /* height:589px; 593.891 width:290px*/
+  .portfolio-popup-content
+    .portfolio-popup-content-body
+    .portfolio-popup-description {
+    font-size: 1.5em;
+  }
+}
+
+/* 로그인 페이지 CSS */
+.khj-wrapper .login-container {
+  display: flex;
+  height: 100%;
+  background-color: #f3f9fb;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.khj-wrapper .login-container .login-content-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #d0d1d2;
+}
+
+.khj-wrapper .login-container .login-content-header .login-logo-img {
+  width: 82px;
+  height: 82px;
+  margin: 21px;
+}
+.khj-wrapper .login-container .login-content-body {
+  padding: 62px 0;
+}
+
+.khj-wrapper .login-container .login-content-body button {
+  display: grid;
+  width: 285px;
+  height: 41px;
+  margin-bottom: 16px;
+  font-weight: 600;
+  grid-template-columns: 20% 60% 20%;
+}
+
+.khj-wrapper .login-container .login-content-body button img {
+  margin-left: 15px;
+}
+
+.khj-wrapper .login-container .login-content-body .login-facebook-btn {
+  background-color: #3e66ae;
+}
+
+.khj-wrapper .login-container .login-content-body .login-google-btn {
+  background-color: #ffff;
+  color: black;
+  border: 0.1px solid rgb(213, 213, 213);
+}
+.khj-wrapper .login-container .login-content-body .login-naver-btn {
+  background-color: #03c75a;
+}
+.khj-wrapper .login-container .login-content-body .login-kakao-btn {
+  background-color: #fede00;
+  color: black;
 }
