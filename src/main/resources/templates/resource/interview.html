@@ -1,79 +1,123 @@
 <!DOCTYPE html>
 <html lang="ko">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="author" content="마스외전" />
-    <meta name="keywords" content="마스외전프로필" />
-    <meta name="description" content="마스외전프로필" />
-    <link rel="stylesheet" href="../resource/css/common.css" />
-    <link rel="stylesheet" href="../resource/css/componets.css" />
-    <link rel="stylesheet" href="../resource/css/animate.css" />
-    <link rel="stylesheet" href="../resource/css/main.css" />
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="author" content="마스외전" />
+  <meta name="keywords" content="마스외전프로필" />
+  <meta name="description" content="마스외전프로필" />
+  <link rel="stylesheet" href="../resource/css/common.css" />
+  <link rel="stylesheet" href="../resource/css/componets.css" />
+  <link rel="stylesheet" href="../resource/css/animate.css" />
+  <link rel="stylesheet" href="../resource/css/main.css" />
   <!--제이쿼리-->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
-    <title>MarsProfile - 그룹인터뷰페이지</title>
-  </head>
-  <body >
-    <!--그룹 인터뷰 페이지-->
-    <!---thumbnailContainer-->
-      <div class="group-interview-container container">
-        <div  class="group-interview-content">
+  <title>MarsProfile - 그룹인터뷰페이지</title>
+</head>
 
-            <div class="editbtn group-interview-thumbs thumbs left-thumbs" >
-                <img src="https://img.youtube.com/vi/-YOr_qLRjjo/0.jpg" />
-            </div>
+<body>
+  <div class="wrapper">
+    <div class="group-interview-container container">
+      <div class="group-interview-thumbs thumbs left-thumbs" onClick="open_popup('linkedit')">
+        <img src="https://img.youtube.com/vi/-YOr_qLRjjo/0.jpg" />
+      </div>
+      <div class="group-interview-thumbs thumbs right-thumbs" onClick="open_popup('portimg')">
+        <img src="https://img.youtube.com/vi/nkDVd9Caz0U/0.jpg" />
+      </div>
+      <div class="group-interview-thumbs thumbs left-thumbs" onClick="open_popup('portvi')">
+        <img src="https://img.youtube.com/vi/nkDVd9Caz0U/0.jpg" />
+      </div>
+      <div class="group-interview-thumbs thumbs right-thumbs" onClick="open_popup('portlink')">
+        <img src="https://img.youtube.com/vi/nkDVd9Caz0U/0.jpg" />
+      </div>
+      <div class="group-interview-thumbs thumbs left-thumbs">
+        <img src="https://img.youtube.com/vi/nkDVd9Caz0U/0.jpg" />
+      </div>
+      <div class="group-interview-thumbs thumbs right-thumbs">
+        <img src="https://img.youtube.com/vi/nkDVd9Caz0U/0.jpg" />
+      </div>
+    </div>
+  </div>
 
-            <div class="group-interview-thumbs thumbs right-thumbs" >
-                <img src="https://img.youtube.com/vi/nkDVd9Caz0U/0.jpg"/>
-            </div>
-            
-            <div class="group-interview-thumbs thumbs left-thumbs" >
-                <img src="https://img.youtube.com/vi/nkDVd9Caz0U/0.jpg"/>
-            </div>
-            <div class="group-interview-thumbs thumbs right-thumbs" >
-                <img src="https://img.youtube.com/vi/nkDVd9Caz0U/hq2.jpg"  />
-            </div>
-            <div class="group-interview-thumbs thumbs left-thumbs" >
-                <img src="https://img.youtube.com/vi/nkDVd9Caz0U/0.jpg"/>
-            </div>
-            <div class="group-interview-thumbs thumbs right-thumbs" >
-                <img src="https://img.youtube.com/vi/nkDVd9Caz0U/0.jpg" />
-            </div>
-           
+  <!--링크 수정 팝업-->
+  <div class="group-interview-popup-wapper popup-wapper hidden">
+    <div class="group-interview-popup-content popup-content">
+      <div class="group-interview-popup-header popup-header">
+        <span class="group-interview-popup-title">YouTube Link</span>
+        <button type="button" class="group-interview-btn-close popup-btn-close" onClick="close_popup()"></button>
+      </div>
+      <div class="group-interview-popup-body popup-body">
+        <hr color="#004a7c" />
+        <div class="input-text">
+          <input type="text" placeholder="링크를 입력해주세요." />
+        </div>
+        <button type="button" class="btn type01 small round">등록하기</button>
+      </div>
+    </div>
+  </div>
+  <!--영상,링크,사진 팝업-->
+  <div class="portfolio-popup-wapper vipopup  popup-wapper hidden">
+    <div class="portfolio-popup-content popup-content">
+      <div class="portfolio-popup-content-header popup-header">
+        <button type="button" onClick="close_popup()" class="portfolio-popup-btn-close popup-btn-close"></button>
+      </div>
+
+      <div class="portfolio-popup-content-body popup-body">
+        <iframe src="https://www.youtube.com/embed/ROSgvx09PHo?autoplay=1" title="YouTube video player" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen>
+        </iframe>
+        <h3 class="portfolio-popup-title">영상포트폴리오</h3>
+        <hr color="#004a7c" />
+        <div class="portfolio-popup-description">
+          설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명
         </div>
       </div>
+    </div>
+  </div>
 
-      <div class="group-interview-popup_wrapper">
-          <div class="group-interview-popup-header">
-            <span class="group-interview-popup-title">YouTube Link</span>
-            <button type="button" class="group-interview-btn-close"></button>
-          </div>
-          <div class="group-interview-popup-body">
-            <hr size="2px"  color="#004a7c"/>
-            <div class="input-text">
-              <input type="text" placeholder="링크를 입력해주세요."/>
-            </div>
-            <a href="" class="btn type01 small normal">등록하기</a>
-          </div>
+  <!--사진 팝업-->
+  <div class="portfolio-popup-wapper imgpopup popup-wapper hidden">
+    <div class="portfolio-popup-content  popup-content ">
+      <div class="portfolio-popup-content-header popup-header">
+        <button type="button" onClick="close_popup()" class="portfolio-popup-btn-close popup-btn-close"></button>
       </div>
-    <!--//그룹 인터뷰 페이지-->
 
-    <script>
+      <div class="portfolio-popup-content-body popup-body">
+        <a href="https://www.naver.com/">
+          <img src="./images/img_mars_sequel_logo_blue.png" />
+        </a>
+        <h3 class="portfolio-popup-title">사진포트폴리오</h3>
+        <hr color="#004a7c" />
+        <div class="portfolio-popup-description">
+          설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명
+        </div>
+      </div>
+    </div>
+  </div>
 
-    //팝업 기능
-      $(".group-interview-popup_wrapper").hide();
-      $(".editbtn").click(function(){
-        $(".group-interview-popup_wrapper").show();
-      })
-    
-      
-      $(".group-interview-btn-close").click(function(){
-        $(".group-interview-popup_wrapper").hide();
-      })
-    
-      </script>
-  </body>
+  <!--링크 팝업-->
+  <div class="portfolio-popup-wapper popup-wapper linkpopup hidden">
+    <div class="portfolio-popup-content  popup-content">
+      <div class="portfolio-popup-content-header popup-header">
+        <button type="button" onClick="close_popup()" class="portfolio-popup-btn-close popup-btn-close"></button>
+      </div>
+
+      <div class="portfolio-popup-content-body popup-body">
+        <a href="https://www.naver.com/">
+          <img src="./images/img_group_image_3.png" />
+        </a>
+        <h3 class="portfolio-popup-title">링크포트폴리오</h3>
+        <hr color="#004a7c" />
+        <div class="portfolio-popup-description"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="./js/pub_ui.js"></script>
+</body>
+
 </html>

@@ -6,7 +6,7 @@ const open_popup = (e) => {
     case "linkedit":
       console.log("합");
       document
-        .querySelector(".group-interview-popup_content")
+        .querySelector(".group-interview-popup-wapper")
         .classList.remove("hidden");
       break;
     case "portimg":
@@ -23,7 +23,7 @@ const open_popup = (e) => {
 
 const close_popup = () => {
   console.log("닫");
-  popup = document.querySelectorAll(".popup-content");
+  popup = document.querySelectorAll(".popup-wapper");
   popup.forEach((element) => {
     element.classList.add("hidden");
   });
