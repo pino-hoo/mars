@@ -23,5 +23,83 @@ input[type='search']::-webkit-search-cancel-button{-webkit-appearance:none;}
 /* clear */
 .both {clear: both;}
 
-/* khj*/
-.container { height: 100%;}
+/**/
+html {
+    height: 100%;
+  }
+  .wrapper {
+    height: 100%;
+  }
+  .container {
+    height: 100%;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  /* popup */
+  .popup-wapper {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.6);
+  }
+  
+  .popup-content {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+    width: 80.55555555556%;
+    margin: 0 auto;
+    background: #fff;
+  }
+  
+  /* 팝업 공통 */
+  .popup-content .popup-header {
+    display: flex;
+    width: 100%;
+    align-items: center;
+  }
+  
+  .popup-btn-close {
+    display: inline;
+    position: absolute;
+    right: 18px;
+    width: 15px;
+    height: 15px;
+    background: url("../images/btn_popup_x.png") no-repeat;
+    background-size: cover;
+  }
+  
+  /* 팝업 미디어쿼리 */
+  @media only screen and (min-width: 540px) {
+    .popup-content {
+      width: 65%;
+    }
+  }
+  
+  @media only screen and (min-width: 730px) {
+    .popup-content {
+      width: 50%;
+    }
+  
+    .popup-content .popup-header {
+      padding: 8.5px 25px;
+      font-size: 1.8em;
+    }
+  
+    .popup-content .popup-body hr {
+      border-width: 2.3px 0 0 0;
+    }
+  
+    .popup-content .popup-header .group-btn-close {
+      width: 20px;
+      height: 20px;
+      right: 25px;
+    }
+  }

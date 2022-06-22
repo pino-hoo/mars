@@ -1,110 +1,323 @@
-/* css 작성 할 때 부모객체의 class 를 앞에 두는 것을 원칙한다.*/
-/* 사파리에서 깨지는거 조심 */
-/* 디자인은 360*610 기준 */
 
-/*group 페이지 영역*/
-.index-container{
-background: url('../images/img_group_image_3.png' ) no-repeat top;
-background-size: cover;
-}
-.index-container .index-content {padding: 4.444% 4.166%;}
-.index-container .index-content .index-content-header {
-display: inline-block; height:62px;}
-.index-container .index-content .index-content-header .index-logo{ height: 100%;}
-.index-container .index-content .index-content-header .index-group-name {
-display: inline; margin: 8px; font-size: 2em; font-weight: 500; color: #ffffff;}
-.index-container .index-content .index-content-body { 
-position:absolute; bottom: 20px; right:12px; 
-}
-.index-container .index-content .index-content-body button {
-font-weight: bolder;
-line-height:30px;
-}
-.index-container .index-content .index-content-body button img {
-height: 1em;
-margin: 0 auto;
-vertical-align:-1.4px;
-}
-/*group-interview 페이지 영역*/
-.group-interview-container .group-interview-content{
-height: 100%; 
-padding: 4px 8px;
-}
-.group-interview-container .group-interview-content .group-interview-thumbs {
-/* 292px * 159  
-451 : 292px * 159   = 100: 64.745 * 35.254 */
-overflow:hidden;
-position: relative;
-width: 50%;
-height: 49.8%;
-padding: 6px 7px 0px 7px;
-}
-.group-interview-container .group-interview-content .group-interview-thumbs img {
-display: block;
-width: 100%;
-height: 100%;
-margin: auto;
-object-fit:cover;
-}
-.group-interview-container .group-interview-content .left-thumbs { float: left;}
-.group-interview-container .group-interview-content .right-thumbs{ float: right;}
-
-/*팝업 영역- 헤더*/
-
-.group-interview-popup_wrapper {
-position: fixed; top: 40%; left: 9.7%;
-overflow: hidden;
-width:80.555%; 
-height:144px;
-margin: 0 auto;
-background: #fff;
-}
-.group-interview-popup_wrapper  .group-interview-popup-header {
-display: flex;
-width: 100%;
-height: 44px;
-padding: 1.7% 5.6%;
-font-size: 1.48em;
-align-items: center;
-}
-.group-interview-popup_wrapper .group-interview-popup-header .group-interview-popup-title{
-display: inline-block;
-height: 100%;
-}
-.group-interview-popup_wrapper .group-interview-popup-header .group-interview-btn-close {
-display: inline;
-position: absolute; right: 5.6%;
-width: 15px; height:15px;
-background:url('../images/btn_popup_x.png') no-repeat ; 
-background-size: cover;
-}
-
-/*팝업 영역- 바디*/
-.group-interview-popup_wrapper .group-interview-popup-body {
-width: 100%;
-text-align: center;
-}
-.group-interview-popup_wrapper .group-interview-popup-body hr {
-width:100%;
-margin: 0;
-}
-.group-interview-popup_wrapper .group-interview-popup-body .input-text input {
-width: 87.585%;
-height: 28px;
-margin: 12px 6.206%;
-padding: 0%;
-border: 1.5px solid #b1b1b1;
-border-radius:5px;
-font-size: 0.2em;
-text-indent: 1em; 
-text-align: left;
-} 
-.group-interview-popup_wrapper .group-interview-popup-body .input-text input::placeholder {
-color: #d2d2d2;
-} 
-.group-interview-popup_wrapper .group-interview-popup-body a {
-margin: 0 auto;
-width: 87.586%;  
-height: 34px;
-font-weight: bolder;
-}
+/* group 페이지 CSS */
+.wrapper .index-container {
+    background: url("../images/img_group_image_3.png") no-repeat top;
+    background-size: cover;
+  }
+  
+  .wrapper .index-container .index-content {
+    padding: 15px 4.166%;
+  }
+  
+  .wrapper .index-container .index-content .index-content-header {
+    display: inline-block;
+    display: grid;
+    grid-template-columns: 20% 20% 60%;
+    align-items: flex-end;
+  }
+  
+  .wrapper .index-container .index-content .index-content-header .index-logo {
+    width: 100%;
+  }
+  
+  .wrapper
+    .index-container
+    .index-content
+    .index-content-header
+    .index-group-name {
+    margin: 0 8px;
+    font-size: 2em;
+    font-weight: 500;
+    color: #ffffff;
+    width: 100%;
+    line-height: 0.9em;
+  }
+  
+  .wrapper .index-container .index-content .index-content-body {
+    position: absolute;
+    bottom: 20px;
+    right: 4.166%;
+  }
+  
+  .wrapper .index-container .index-content .index-content-body button {
+    font-weight: bolder;
+    line-height: 30px;
+  }
+  
+  .wrapper .index-container .index-content .index-content-body button img {
+    height: 1em;
+    margin: 0 auto;
+    vertical-align: -1.4px;
+  }
+  
+  /*group-interview 페이지 CSS */
+  .wrapper .group-interview-container {
+    background-color: f3f9fb;
+    overflow: scroll;
+    padding: 6px 7px;
+  }
+  
+  .wrapper .group-interview-container .group-interview-thumbs {
+    /* 섬네일 원래 비율 292px * 159  */
+    overflow: hidden;
+    width: 50%;
+    height: 50%;
+    padding: 6px 7px;
+  }
+  
+  .wrapper .group-interview-container .group-interview-thumbs img {
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    object-fit: cover;
+  }
+  
+  .wrapper .group-interview-container .left-thumbs {
+    float: left;
+  }
+  
+  .wrapper .group-interview-container .right-thumbs {
+    float: right;
+  }
+  
+  /* 링크 수정 팝업 영역 */
+  .group-interview-popup-content .group-interview-popup-header {
+    padding: 6.5px 16.234px;
+    font-size: 1.48em;
+  }
+  
+  .group-interview-popup-content
+    .group-interview-popup-header
+    .group-interview-popup-title {
+    display: inline-block;
+    height: 100%;
+  }
+  
+  .group-interview-popup-content .group-interview-popup-body {
+    width: 100%;
+    text-align: center;
+  }
+  
+  .group-interview-popup-content .group-interview-popup-body hr {
+    margin: 0;
+    border-width: 2px 0 0 0;
+  }
+  
+  .group-interview-popup-content .group-interview-popup-body .input-text input {
+    width: 87.585%;
+    height: 28px;
+    margin: 12px 16px;
+    border: 1.5px solid #b1b1b1;
+    border-radius: 5px;
+    font-size: 0.2em;
+    text-indent: 1em;
+  }
+  
+  .group-interview-popup-content
+    .group-interview-popup-body
+    .input-text
+    input::placeholder {
+    color: #d2d2d2;
+  }
+  
+  .popup-content .popup-body .btn {
+    width: 87.586%;
+    height: 34px;
+    margin: 0 auto;
+    margin-bottom: 12px;
+    font-weight: bolder;
+    line-height: 34px;
+  }
+  
+  /* 사진 링크 영상 팝업 영역 */
+  .portfolio-popup-content .portfolio-popup-content-header {
+    height: 42px;
+  }
+  
+  .portfolio-popup-content .portfolio-popup-content-body {
+    display: flex;
+    flex-direction: column;
+    margin: 0 19px 13px;
+  }
+  .portfolio-popup-content .portfolio-popup-content-body iframe {
+    width: 252px;
+    height: 453px;
+    align-self: center;
+  }
+  
+  .portfolio-popup-content .portfolio-popup-content-body img {
+    width: 100%;
+    align-self: center;
+  }
+  
+  .portfolio-popup-content .portfolio-popup-content-body .portfolio-popup-title {
+    margin-bottom: 1px;
+    padding-top: 7px;
+    font-size: 1.1em;
+  }
+  
+  .portfolio-popup-content
+    .portfolio-popup-content-body
+    .portfolio-popup-description {
+    padding-top: 7px;
+    font-size: 0.9em;
+  }
+  .portfolio-popup-content .portfolio-popup-content-body hr {
+    margin: 0.1px;
+    border-width: 1.4px 0 0 0;
+  }
+  
+  /* login 페이지 CSS */
+  .wrapper .login-container {
+    display: flex;
+    height: 100%;
+    background-color: #f3f9fb;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .wrapper .login-container .login-content-header {
+    display: flex;
+    color: #d0d1d2;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .wrapper .login-container .login-content-header .login-logo-img {
+    width: 82px;
+    height: 82px;
+    margin: 21px;
+  }
+  .wrapper .login-container .login-content-body {
+    padding: 62px 0;
+  }
+  
+  .wrapper .login-container .login-content-body button {
+    display: grid;
+    width: 285px;
+    height: 41px;
+    margin-bottom: 16px;
+    font-weight: 600;
+    grid-template-columns: 20% 60% 20%;
+  }
+  
+  .wrapper .login-container .login-content-body button img {
+    margin-left: 15px;
+  }
+  
+  .wrapper .login-container .login-content-body .login-facebook-btn {
+    background-color: #3e66ae;
+  }
+  
+  .wrapper .login-container .login-content-body .login-google-btn {
+    background-color: #ffff;
+    color: black;
+    border: 0.1px solid rgb(213, 213, 213);
+  }
+  .wrapper .login-container .login-content-body .login-naver-btn {
+    background-color: #03c75a;
+  }
+  .wrapper .login-container .login-content-body .login-kakao-btn {
+    background-color: #fede00;
+    color: black;
+  }
+  
+  /* -- 미디어쿼리 -- */
+  @media only screen and (max-width: 359px) {
+    /* 그룹 페이지 영역 미디어쿼리 */
+    .wrapper
+      .index-container
+      .index-content
+      .index-content-header
+      .index-group-name {
+      font-size: 1.5em;
+    }
+  
+    /* 사진영상 정보 팝업 영역 미디어쿼리 */
+    .portfolio-popup-content .portfolio-popup-content-body iframe {
+      width: 190px;
+      height: 342px;
+    }
+  
+    /* 로그인 페이지 영역 미디어쿼리 */
+    .wrapper .login-container .login-content-body button {
+      width: 90%;
+      margin: auto;
+      margin-bottom: 16px;
+    }
+  }
+  
+  @media only screen and (min-width: 412px) {
+    /* 사진영상 정보 팝업 영역 미디어쿼리 */
+    .portfolio-popup-content .portfolio-popup-content-body iframe {
+      width: 293px;
+      height: 527px;
+    }
+  }
+  
+  @media only screen and (min-width: 540px) {
+    /* 그룹 페이지 영역 미디어쿼리 */
+    .wrapper
+      .index-container
+      .index-content
+      .index-content-header
+      .index-group-name {
+      margin: 0 15px;
+      font-size: 2.2em;
+    }
+  
+    .wrapper .index-container .index-content {
+      padding: 25px 4.166%;
+    }
+  }
+  
+  @media only screen and (min-width: 730px) {
+    /* 링크 팝업 영역 미디어쿼리 */
+    .group-interview-popup-content .group-interview-popup-body .input-text input {
+      width: 87.585%;
+      height: 40px;
+      margin: 16px 17.984px;
+      font-size: 0.9em;
+      text-indent: 0.5em;
+    }
+  
+    .group-interview-popup-content .group-interview-popup-body .btn {
+      height: 46px;
+      margin-bottom: 14px;
+      font-size: 1.2em;
+      line-height: 46px;
+    }
+  }
+  
+  @media only screen and (min-width: 819px) {
+    /* 그룹 페이지 영역 미디어쿼리 */
+    .wrapper
+      .index-container
+      .index-content
+      .index-content-header
+      .index-group-name {
+      margin: 0 20px;
+      font-size: 3.5em;
+    }
+  
+    .wrapper .index-container .index-content {
+      padding: 35px 4.166%;
+    }
+  
+    /* 그룹 인터뷰 영역 미디어쿼리 */
+    .wrapper .group-interview-container {
+      padding: 12px 14px;
+    }
+  
+    .wrapper .group-interview-container .group-interview-thumbs {
+      padding: 12px 14px;
+    }
+  
+    /* 사진영상 정보 팝업 영역 미디어쿼리 */
+    .portfolio-popup-content .portfolio-popup-content-body iframe {
+      width: 372px;
+      height: 669px;
+    }
+  }
