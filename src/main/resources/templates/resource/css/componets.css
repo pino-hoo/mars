@@ -5,12 +5,15 @@
     --tertiary : #f3f9fb;
 }
 
+/*font-color*/
+.secondary-color {color: var(--secondary);}
+
 /* BUTTON */
-.btn{display: inline-block; min-width: 80px; box-sizing: border-box; text-align: center;}
-.btn.xx-small {height: 26px; line-height: 26px; font-size: 0.93em;} /*수/삭*/
+.btn{display: inline-block; vertical-align:top; min-width: 42px; box-sizing: border-box; text-align: center;}
+.btn.xx-small {width: 46px; height: 26px; line-height: 26px; font-size: 0.813rem;} /*수정.삭제*/
 .btn.x-small{width: 80px; height: 34px; line-height: 34px; font-size: 1em;} /*로그인*/
 .btn.small{width: 254px; height: 40px; line-height: 40px; font-size: 1em;} /*팝업 추가*/
-.btn.medium{width: 135px; height: 45px; line-height: 45px; font-size: 1.071em} /*save/cancle*/
+.btn.medium{width: 37.5%; line-height: 3em; font-size: 1.072rem;} /*저장.취소*/
 .btn.large{height: 50px; line-height: 50px; font-size: 1.071em;}
 .btn.full {width: 100%; height: 60px; line-height: 60px; font-size: 1.143em;}
 
@@ -19,7 +22,7 @@
 .btn.type03 {border-radius: 4px; background-color: #e5e5e5;font-weight: bold; color: #444444;}
 .btn.type04 {border-radius: 2px; background-color: var(--secondary); font-weight: 500; color: #eeeeee;}
 .btn.type05 {border-radius: 8px; border: 2px solid #ffffff; background-color: none; font-weight: bold; color: #ffffff;}
-.btn.type06 {background-color: #e5e5e5; font-weight: bold; color: #444444;}
+.btn.type06 {border-radius: 2px; background-color: #e5e5e5; font-weight: bold; color: #444444;}
 
 .btn.normal{border-radius: 5px;-webkit-border-radius: 5px;}
 
@@ -42,21 +45,40 @@
 .btn-delete{display: inline-block;width: 20px;height: 21px;background: url('../images/common/ico_delete.png') 0 0 no-repeat;}
 .btn-view {background: url('../images/common/ico_next_hover.png') 50% 50% no-repeat;}
 
-.btn-area{width: 100%; font-size: 0; text-align: center;padding-top: 60px;box-sizing: border-box;-webkit-box-sizing: border-box;}
-.btn-area::after{content: '';display: block;clear: both;height: 0;visibility: hidden;}
-.btn-area.type02 {position: relative;padding-top: 0;}
+.btn-area{width: 100%; padding: 10px 0 30px 0; font-size: 0; line-height: 0; text-align: center;}
+.btn-area::after,
+.edit-btn-area::after{content: '';display: block;clear: both;height: 0;visibility: hidden;}
+.edit-btn-area {position:absolute; font-size: 0; line-height: 0; text-align: center;}
+/* .btn-area.type02 {position: relative;padding-top: 0;}
 .btn-area.type03 {padding-top: 160px;}
-.btn-area.type04 {padding-top: 110px;}
-.btn-area .btn + .btn {margin-left: 10px;}
-.btn-area.right{padding-top: 20px;text-align: right;}
+.btn-area.type04 {padding-top: 110px;} */
 
 /* INPUT */
 .input-text{}
 .input-text input{width: 100%;height: 54px;line-height: 52px;box-sizing: border-box;-webkit-box-sizing: border-box;border: 1px solid #d2d0d4;color: #444444;border-radius: 10px;-webkit-border-radius: 10px;text-indent: 25px;font-size: 0.875rem;padding: 0;}
-.input-text input:focus{color: #000;border: 1px solid #005691;outline: none;}
+.input-text input:focus{color: #000;border: 1px solid var(--secondary);outline: none;}
 .input-text input[readonly]{background-color: #f7f7f7;}
 .input-text input[readonly]:focus{color: #a1a1a1;}
 
 .text-area{width: 100%;}
 .text-area textarea{width: 100%;min-height: 200px;padding: 13px 25px;font-size: 0.875rem;line-height: 1.75rem;background-color: #fff;border: 1px solid #d2d0d4;border-radius: 10px;-webkit-border-radius: 10px;box-sizing: border-box;-webkit-box-sizing: border-box;}
-.text-area textarea:focus{color: #000;outline: none;border: 1px solid #005691;}
+.text-area textarea:focus{color: #000;outline: none;border: 1px solid var(--secondary);}
+
+/* 팝업 */
+.popup-close-btn {
+    width: 15px;
+    height: 15px;
+    background: url(../images/ico_close_btn.png) no-repeat center;
+    font-weight: 500;
+}
+
+@media screen and (min-width : 320px){
+    html {font-size: 13px;}
+}
+@media screen and (min-width : 500px){
+    html {font-size: 16px;}
+}
+@media screen and (min-width : 900px){
+    html {font-size: 17px;}
+}
+

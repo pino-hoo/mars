@@ -50,6 +50,24 @@ input[type='search']::-webkit-search-cancel-button{-webkit-appearance:none;}
     display: none;
 }
 
+/*popup*/
+.popup-wapper {
+    background: rgba(0, 0, 0, 0.6);
+}
+.popup-info-container {
+    width: 78%;
+    background-color: #fff;
+}
+.popup-info-content-header {
+    display: flex;
+    display: -webkit-box;
+    align-items: center;
+    -webkit-box-align: center;
+    justify-content: space-between;
+    -webkit-box-pack: justify;
+    font-size: 1.15em;
+}
+
 /*margin, padding*/
 .mb-5 {
     margin-bottom: 5px;
